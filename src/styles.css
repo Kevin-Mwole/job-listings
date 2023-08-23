@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .badge {
+    @apply h-5 uppercase font-bold text-white rounded-xl px-2 py-1;
+  }
+
+  .filter {
+    @apply font-semibold text-cyan-primary bg-cyan-filter-color mx-1 px-2 py-1 rounded;
+  }
+}
+
+.item-enter {
+  opacity: 0;
+  /* transform: translateX(-150%); */
+}
+.item-enter-active {
+  opacity: 1;
+  /* transform: translateX(0%); */
+}
+.item-exit {
+  opacity: 1;
+  /* transform: translateX(0%); */
+}
+.item-exit-active {
+  opacity: 0;
+  /* transform: translateX(150%); */
+}
+.item-enter-active,
+.item-exit-active {
+  transition: opacity 700ms ease, transform 700ms ease;
+}
